@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="com_sellacious">
+
+		<fieldset
+			name="shop_info"
+			label="COM_SELLACIOUS_SETUP_FIELDSET_SHOP_INFO_LABEL"
+			description="COM_SELLACIOUS_SETUP_FIELDSET_SHOP_INFO_DESC">
+
+			<field
+				name="shop_name"
+				type="text"
+				label="COM_SELLACIOUS_SETUP_SHOP_NAME_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHOP_NAME_DESC"
+				class="form-control w100p"
+				labelclass="col-md-3 control-label"
+				required="true"
+			/>
+
+			<field
+				name="shop_email"
+				type="email"
+				label="COM_SELLACIOUS_SETUP_SHOP_EMAIL_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHOP_EMAIL_DESC"
+				class="form-control w100p"
+				labelclass="col-md-3 control-label"
+				required="true"
+			/>
+
+			<field
+				name="shop_phone1"
+				type="text"
+				label="COM_SELLACIOUS_SETUP_SHOP_PHONE_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHOP_PHONE_DESC"
+				class="form-control w100p"
+				labelclass="col-md-3 control-label"
+			/>
+
+			<field
+				name="shop_address"
+				type="textarea"
+				label="COM_SELLACIOUS_SETUP_SHOP_ADDRESS_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHOP_ADDRESS_DESC"
+				class="textarea form-control"
+				labelclass="col-md-3 control-label"
+				rows="5"
+			/>
+
+			<field
+				name="shop_country"
+				type="location"
+				label="COM_SELLACIOUS_SETUP_SHOP_COUNTRY_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHOP_COUNTRY_DESC"
+				class="w100p"
+				labelclass="col-md-3 control-label"
+				autocomplete="off"
+				gl_type="country"
+				required="true"
+				rel=""
+			/>
+
+			<field
+				name="global_currency"
+				type="currency"
+				label="COM_SELLACIOUS_SETUP_SHOP_CURRENCY_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHOP_CURRENCY_DESC"
+				class="w100p hasSelect2"
+				labelclass="col-md-3 control-label"
+				default="INR"
+				required="true"
+			/>
+
+			<field
+				name="shop_logo"
+				type="fileplus"
+				label="COM_SELLACIOUS_SETUP_SHOP_LOGO_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHOP_LOGO_DESC"
+				labelclass="col-md-3 control-label"
+				limit="1"
+				context="config.shop_logo"
+				record_id="1"
+			/>
+
+		</fieldset>
+
+		<fieldset
+			name="shop_setting"
+			label="COM_SELLACIOUS_SETUP_FIELDSET_SHOP_SETTING_LABEL"
+			description="COM_SELLACIOUS_SETUP_FIELDSET_SHOP_SETTING_DESC">
+
+			<field
+				name="allow_checkout"
+				type="radio"
+				label="COM_SELLACIOUS_SETUP_FIELD_ALLOW_CHECKOUT_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_ALLOW_CHECKOUT_DESC"
+				labelclass="col-md-3 control-label"
+				default="1"
+			>
+				<option value="1">COM_SELLACIOUS_SETUP_FIELD_ALLOW_CHECKOUT_YES</option>
+				<option value="0">COM_SELLACIOUS_SETUP_FIELD_ALLOW_CHECKOUT_NO</option>
+			</field>
+
+			<field
+				name="multi_seller"
+				type="radio"
+				label="COM_SELLACIOUS_SETUP_FIELD_MULTI_SELLER_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_MULTI_SELLER_DESC"
+				class="w100p"
+				labelclass="col-md-3 control-label"
+				default="1"
+			>
+				<option value="0">COM_SELLACIOUS_SETUP_FIELD_MULTI_SELLER_CHOICE_NO</option>
+				<option value="1">COM_SELLACIOUS_SETUP_FIELD_MULTI_SELLER_CHOICE_YES</option>
+			</field>
+
+			<field
+				name="allowed_product_type"
+				type="radio"
+				default="both"
+				label="COM_SELLACIOUS_SETUP_FIELD_ALLOWED_PRODUCT_TYPE_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_ALLOWED_PRODUCT_TYPE_DESC"
+				labelclass="col-md-3 control-label"
+			>
+				<option value="physical">COM_SELLACIOUS_SETUP_FIELD_ALLOWED_PRODUCT_TYPE_OPTION_PHYSICAL</option>
+				<option value="electronic">COM_SELLACIOUS_SETUP_FIELD_ALLOWED_PRODUCT_TYPE_OPTION_ELECTRONIC</option>
+				<option value="both">COM_SELLACIOUS_SETUP_FIELD_ALLOWED_PRODUCT_TYPE_OPTION_BOTH</option>
+			</field>
+
+			<field
+				name="allowed_price_display"
+				type="checkboxes"
+				label="COM_SELLACIOUS_SETUP_FIELD_PRICE_DISPLAY_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_PRICE_DISPLAY_DESC"
+				labelclass="col-md-3 control-label"
+				required="true"
+			>
+				<option value="0">COM_SELLACIOUS_SETUP_FIELD_PRICE_DISPLAY_CHOICE_SHOW</option>
+				<option value="1">COM_SELLACIOUS_SETUP_FIELD_PRICE_DISPLAY_CHOICE_CALL</option>
+				<option value="2">COM_SELLACIOUS_SETUP_FIELD_PRICE_DISPLAY_CHOICE_EMAIL</option>
+				<option value="3">COM_SELLACIOUS_SETUP_FIELD_PRICE_DISPLAY_CHOICE_QUERY</option>
+			</field>
+			<field
+				name="allowed_listing_type"
+				type="checkboxes"
+				label="COM_SELLACIOUS_SETUP_FIELD_LISTING_TYPE_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_LISTING_TYPE_DESC"
+				labelclass="col-md-3 control-label"
+				checkedOptions="1"
+				required="true"
+			>
+				<option value="1">COM_SELLACIOUS_SETUP_FIELD_LISTING_TYPE_NEW</option>
+				<option value="2">COM_SELLACIOUS_SETUP_FIELD_LISTING_TYPE_USED</option>
+				<option value="3">COM_SELLACIOUS_SETUP_FIELD_LISTING_TYPE_REFURBISHED</option>
+			</field>
+
+			<field
+				name="purchase_return"
+				type="radio"
+				label="COM_SELLACIOUS_SETUP_FIELD_PURCHASE_RETURN_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_PURCHASE_RETURN_DESC"
+				labelclass="col-md-3 control-label"
+				default="1"
+			>
+				<option value="0">COM_SELLACIOUS_SETUP_FIELD_PURCHASE_RETURN_DISABLE</option>
+				<option value="1">COM_SELLACIOUS_SETUP_FIELD_PURCHASE_RETURN_GLOBAL</option>
+				<option value="2" class="multiseller-show">COM_SELLACIOUS_SETUP_FIELD_PURCHASE_RETURN_SELLER</option>
+			</field>
+
+			<field
+				name="purchase_exchange"
+				type="radio"
+				label="COM_SELLACIOUS_SETUP_FIELD_PURCHASE_EXCHANGE_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_PURCHASE_EXCHANGE_DESC"
+				labelclass="col-md-3 control-label"
+				default="1"
+			>
+				<option value="0">COM_SELLACIOUS_SETUP_FIELD_PURCHASE_EXCHANGE_DISABLE</option>
+				<option value="1">COM_SELLACIOUS_SETUP_FIELD_PURCHASE_EXCHANGE_GLOBAL</option>
+				<option value="2" class="multiseller-show">COM_SELLACIOUS_SETUP_FIELD_PURCHASE_EXCHANGE_SELLER</option>
+			</field>
+
+			<field
+				name="product_compare"
+				type="radio"
+				default="1"
+				label="COM_SELLACIOUS_SETUP_FIELD_PRODUCT_COMPARE_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_PRODUCT_COMPARE_DESC"
+				labelclass="col-md-3 control-label"
+			>
+				<option value="0">JDISABLED</option>
+				<option value="1">JENABLED</option>
+			</field>
+
+			<field
+				name="flat_shipping"
+				type="radio"
+				label="COM_SELLACIOUS_SETUP_SHIPPING_TYPE_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHIPPING_TYPE_DESC"
+				class="w100p"
+				labelclass="col-md-3 control-label"
+				default="1"
+			>
+				<option value="1">COM_SELLACIOUS_SETUP_SHIPPING_TYPE_CHOICE_FLAT</option>
+				<option value="0">COM_SELLACIOUS_SETUP_SHIPPING_TYPE_CHOICE_RULES</option>
+			</field>
+
+			<field
+				name="shipping_flat_fee"
+				type="money"
+				label="COM_SELLACIOUS_SETUP_SHIPPING_FLAT_FEE_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHIPPING_FLAT_FEE_DESC"
+				default="0.00"
+				class="form-control tiny-input"
+				labelclass="col-md-3 control-label"
+				validate="money"
+				sign="GEZ"
+			/>
+
+			<field
+				name="allow_ratings_for"
+				type="checkboxes"
+				label="COM_SELLACIOUS_SETUP_ALLOW_RATINGS_FOR_LABEL"
+				description="COM_SELLACIOUS_SETUP_ALLOW_RATINGS_FOR_DESC"
+				labelclass="col-md-3 control-label"
+				default="1"
+			>
+				<option value="product">COM_SELLACIOUS_SETUP_ALLOW_RATINGS_FOR_PRODUCT</option>
+				<option value="seller">COM_SELLACIOUS_SETUP_ALLOW_RATINGS_FOR_SELLER</option>
+				<option value="packaging">COM_SELLACIOUS_SETUP_ALLOW_RATINGS_FOR_PACKAGING</option>
+				<option value="shipment">COM_SELLACIOUS_SETUP_ALLOW_RATINGS_FOR_SHIPMENT</option>
+			</field>
+
+			<field
+				name="allow_review_for"
+				type="checkboxes"
+				label="COM_SELLACIOUS_SETUP_ALLOW_REVIEW_FOR_LABEL"
+				description="COM_SELLACIOUS_SETUP_ALLOW_REVIEW_FOR_DESC"
+				labelclass="col-md-3 control-label"
+				default="1"
+			>
+				<option value="product">COM_SELLACIOUS_SETUP_ALLOW_REVIEW_FOR_PRODUCT</option>
+				<option value="seller">COM_SELLACIOUS_SETUP_ALLOW_REVIEW_FOR_SELLER</option>
+			</field>
+
+		</fieldset>
+
+		<fieldset
+			name="multi_seller"
+			label="COM_SELLACIOUS_SETUP_FIELDSET_MULTI_SELLER_LABEL"
+			description="COM_SELLACIOUS_SETUP_FIELDSET_MULTI_SELLER_DESC">
+
+			<field
+				name="query_form_recipient"
+				type="radio"
+				label="COM_SELLACIOUS_SETUP_FIELD_QUERY_FORM_RECIPIENT_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_QUERY_FORM_RECIPIENT_DESC"
+				default="2"
+				labelclass="col-md-3 control-label"
+			>
+				<option value="2">COM_SELLACIOUS_SETUP_FIELD_QUERY_FORM_RECIPIENT_CHOICE_ADMIN</option>
+				<option value="1">COM_SELLACIOUS_SETUP_FIELD_QUERY_FORM_RECIPIENT_CHOICE_SELLER</option>
+				<option value="3">COM_SELLACIOUS_SETUP_FIELD_QUERY_FORM_RECIPIENT_CHOICE_BOTH</option>
+			</field>
+
+			<field
+				name="free_listing"
+				type="radio"
+				label="COM_SELLACIOUS_SETUP_FIELD_FREE_LISTING_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_FREE_LISTING_DESC"
+				labelclass="col-md-3 control-label"
+				default="0"
+			>
+				<option value="1">COM_SELLACIOUS_SETUP_FIELD_FREE_LISTING_CHOICE_YES</option>
+				<option value="0">COM_SELLACIOUS_SETUP_FIELD_FREE_LISTING_CHOICE_NO</option>
+			</field>
+
+			<field
+				name="listing_fee"
+				type="money"
+				label="COM_SELLACIOUS_SETUP_FIELD_LISTING_FEE_LABEL"
+				description="COM_SELLACIOUS_SETUP_FIELD_LISTING_FEE_DESC"
+				class="form-control w100p"
+				labelclass="col-md-3 control-label"
+				default="0"
+				validate="money"
+				sign="GEZ"
+				currency="global"
+			/>
+
+			<field
+				name="on_sale_commission"
+				type="rates"
+				label="COM_SELLACIOUS_SETUP_ON_SALE_COMMISSION_LABEL"
+				description="COM_SELLACIOUS_SETUP_ON_SALE_COMMISSION_DESC"
+				class="w100p"
+				labelclass="col-md-3 control-label"
+				currency="global"
+			/>
+
+			<field
+				name="shipped_by"
+				type="radio"
+				label="COM_SELLACIOUS_SETUP_SHIPPED_BY_LABEL"
+				description="COM_SELLACIOUS_SETUP_SHIPPED_BY_DESC"
+				class="w100p"
+				labelclass="col-md-3 control-label"
+				default="shop"
+			>
+				<option value="shop">COM_SELLACIOUS_SETUP_SHIPPED_BY_OPTION_SHOP</option>
+				<option value="seller">COM_SELLACIOUS_SETUP_SHIPPED_BY_OPTION_SELLER</option>
+			</field>
+
+		</fieldset>
+
+	</fields>
+
+	<fieldset
+		name="premium"
+		label="COM_SELLACIOUS_SETUP_FIELDSET_PREMIUM_LABEL"
+		description="COM_SELLACIOUS_SETUP_FIELDSET_PREMIUM_DESC">
+
+		<field
+			name="premium_trial"
+			type="radio"
+			label="COM_SELLACIOUS_SETUP_FIELD_PREMIUM_TRIAL_LABEL"
+			description="COM_SELLACIOUS_SETUP_FIELD_PREMIUM_TRIAL_DESC"
+			labelclass="col-md-3 control-label"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+	</fieldset>
+
+</form>
